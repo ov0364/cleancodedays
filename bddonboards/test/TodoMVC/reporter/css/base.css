@@ -1,0 +1,49 @@
+.logo-icon {
+    width: 99px;
+    height: 99px;
+}
+.thumbnail-success {
+    border: 1px solid #d8bf0d;
+}
+.thumbnail-fail {
+    border: 1px solid #ff0606;
+}
+.thumbnail img {
+    width: 100%;
+}
+.modal-content {
+    padding: 10px;
+}
+.bs-docs-header {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.bs-docs-header {
+    background-color: #6F5499;
+    background-image: linear-gradient(to bottom, #563D7C 0px, #6F5499 100%);
+    background-repeat: repeat-x;
+    color: #CDBFE3;
+    padding: 30px 15px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.bs-docs-header h1 {
+    margin-right: 380px;
+    font-size: 60px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+.scenario-title {
+    font-size: 22px;
+}
+.scenario-passed .scenario-title, .scenario-failed .scenario-title {
+    color : white;
+}
+.scenario-passed {
+    background-color : green
+}
+.scenario-failed {
+    background-color : red
+}

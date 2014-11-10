@@ -1,0 +1,23 @@
+{
+    "captureRoot" : "../test/TodoMVC/capture",
+    "appRoot" : "http://localhost:8234/todos/src/",
+    "compareRoot" : "/lib/ResembleJs/resemblejscontainer.html",    
+    "root" : "http://localhost:8234/bddonboards",
+    "viewsRoot" : "/test/TodoMVC/views",
+    "waitTimeout" : 2000,
+    "viewport" : {
+        "width" : 600,
+        "height" : 500
+    },
+    "title":"todos",
+    "storyboard":[
+        {
+            "title":"It should manage my todos.",
+            "steps":[
+                {"add":["Rule the web"]},
+                {"add":["<h1>test</h1>"]},
+                {"add":["Write codekadskljdsa;lkjflkdsajflkdsajlkfjsalkfjlkdsajflkdsflkjdflkjdsal"]}
+            ]
+        }
+    ]
+}

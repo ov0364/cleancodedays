@@ -1,0 +1,23 @@
+
+Story
+As a [role] I want [feature] so that [benefit]
+
+Scenarios 
+It should [do something] 
+Given [initial context], when [event occurs], then [ensure some outcomes].
+
+
+Story
+As a User I want to manage my todos so that I can achieve more in my life.
+
+Scenarios 
+It should open the app
+Given no app
+When opening the app
+Then the title todos is shown.
+And the list is empty
+
+It should add an item
+Given an app
+When adding item "Rule the web"
+Then "Rule the web" is in the list

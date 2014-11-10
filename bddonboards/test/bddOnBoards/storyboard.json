@@ -1,0 +1,18 @@
+{
+  "root" : "http://localhost:8111",
+  "appRoot" : "/test/bddOnBoards/simple/app",
+  "captureRoot" : "../test/bddOnBoards/simple/capture",
+  "compareRoot" : "/lib/ResembleJs/resemblejscontainer.html",
+  "viewsRoot" : "/test/bddOnBoards/simple/views",
+  "viewport" : {
+    "width" : 600,
+    "height" : 600
+  },
+  "waitTimeout" : 5000,
+  "steps" : [{
+    "fillSelectors" : [
+      "form",
+      {"input" : "Rule the web"},
+      true]
+  }]
+}

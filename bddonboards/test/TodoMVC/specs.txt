@@ -1,0 +1,3 @@
+As an user I want to manage my todos so that i can achieve more in my life.
+    It should create / read / update / delete an item.
+    It should filter the todo list.

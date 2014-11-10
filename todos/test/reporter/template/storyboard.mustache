@@ -1,0 +1,68 @@
+<div id="content" class="bs-docs-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{title}}</h1>
+                <p>{{story}}</p>
+                </div>
+            <div class="col-md-4">
+                
+            </div>
+        </div>
+    </div>
+</div>        
+
+
+<div class="container bs-docs-container">
+    {{#storyboards}}
+    <div class="bs-docs-grid">
+        <h2>{{title}}</h2>
+        <div class="row">
+            {{#storyboard}}
+            <div class="col-md-4">
+                <div class="thumbnail" data-toggle="modal" data-target=".bs-story-item-{{id}}-modal-lg">
+                    <h3 class="{{#fail}}scenario-failed{{/fail}}{{#passed}}scenario-passed{{/passed}}">
+                        <span class="glyphicon glyphicon-{{#fail}}remove{{/fail}}{{#passed}}ok{{/passed}}-sign"></span>&nbsp;
+                        {{title}}
+                    </h3>
+                    <img src="{{screenshot}}.png" />
+                </div>
+            </div>
+            {{/storyboard}}
+        </div>
+    </div>
+    {{/storyboards}}
+</div>
+{{#storyboards}}
+{{#storyboard}}
+<div class="modal fade bs-story-item-{{id}}-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <h2>{{title}}</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h3>expected</h3>
+                    <img src="{{screenshot}}.png" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h3>actual</h3>
+                    <img src="{{screenshot}}.diff.png" />
+                </div>
+            </div>
+            {{#fail}}
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h3>diff</h3>
+                    <img src="{{screenshot}}.fail.png" />
+                </div>
+            </div>
+            {{/fail}}
+        </div>
+    </div>
+  </div>
+</div>      
+{{/storyboard}}
+{{/storyboards}}

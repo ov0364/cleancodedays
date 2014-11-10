@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script type="text/javascript" src="resemble.js"></script>
+        <script type="text/javascript">
+            //var mismatchTolerance = 0;
+            window.result;
+            
+            function run(label){
+
+                function render(data){
+                    console.log("render : ", data);
+                    var img = new Image();
+
+                    img.onload = function(){
+                        window._imagediff_.hasImage = true;
+                    };
+                    document.getElementById('image-diff').appendChild(img);
+                    img.src = data.getImageDataUrl(label);
+                }
+
+                resemble(document.getElementById('image-diff-one').files[0]).
+                    compareTo(document.getElementById('image-diff-two').files[0]).
+                    ignoreAntialiasing(). // <-- muy importante
+                    onComplete(function(data){
+                        var diffImage;
+
+                        result = data;
+                        
+                        //if(Number(data.misMatchPercentage) > mismatchTolerance){
+                        //    result = data.misMatchPercentage;
+                        //} else {
+                        //    result = false;
+                        //}
+
+                        window._imagediff_.hasResult = true;
+
+//                        if(Number(data.misMatchPercentage) > mismatchTolerance){
+//                            render(data);
+//                        }
+
+                    });
+            }    
+            
+            window._imagediff_ = {
+                hasResult: false,
+                hasImage: false,
+                run: run,
+                getResult: function(){
+                    window._imagediff_.hasResult = false;
+                    return window.result;
+                }
+            };            
+        </script>
+            
+    </head>
+    <body>
+		<div> <!-- style="display:block;position:absolute;border:0;top:-1px;left:-1px;height:1px;width:1px;overflow:hidden;" -->
+            <form id="image-diff">
+                <input type="file" id="image-diff-one" name="one"/>
+                <input type="file" id="image-diff-two" name="two"/>
+            </form>
+            <div id="image-diff"></div>
+        </div>
+    </body>        
+</html>

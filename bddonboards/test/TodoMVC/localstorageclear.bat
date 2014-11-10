@@ -1,0 +1,1 @@
+del "C:\Users\foverbee\AppData\Local\Ofi Labs\PhantomJS\http_todomvc.com_0.localstorage"

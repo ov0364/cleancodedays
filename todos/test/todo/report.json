@@ -1,0 +1,21 @@
+{
+	"title": "todos",
+	"story": "As an user I want to manage my todo so I can achieve more in my life",
+	"storyboards": {
+		"title": "it should add a todo",
+		"storyboard": [
+			{
+				"id": 0,
+				"title": "opening the app",
+				"screenshot": "../todo/screenshots\\01 - opening the app",
+				"passed": true
+			},
+			{
+				"id": 1,
+				"title": "adding 'Rule the web'",
+				"screenshot": "../todo/screenshots\\02 - adding rule the web",
+				"passed": true
+			}
+		]
+	}
+}

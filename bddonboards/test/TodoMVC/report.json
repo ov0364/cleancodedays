@@ -1,0 +1,34 @@
+{
+	"title": "todos",
+	"storyboard": [
+		{
+			"title": "It should manage my todos.",
+			"steps": [
+				{
+					"id": "1",
+					"title": "open",
+					"passed": true,
+					"fail": false
+				},
+				{
+					"id": "2",
+					"title": "add \"Rule the web\"",
+					"passed": true,
+					"fail": false
+				},
+				{
+					"id": "3",
+					"title": "add \"<h1>test</h1>\"",
+					"passed": false,
+					"fail": true
+				},
+				{
+					"id": "4",
+					"title": "add \"Write codekadskljdsa;lkjflkdsajflkdsajlkfjsalkfjlkdsajflkdsflkjdflkjdsal\"",
+					"passed": false,
+					"fail": true
+				}
+			]
+		}
+	]
+}
